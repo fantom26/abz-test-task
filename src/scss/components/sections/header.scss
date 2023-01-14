@@ -1,0 +1,25 @@
+.header {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+
+  &-wrapper {
+    @include flex-all-sb;
+
+    @media (max-width: em(1024)) and (min-width: em(769)) {
+      padding-right: 4.5rem;
+      padding-left: 4.5rem;
+    }
+
+    @media (max-width: em(768)) and (min-width: em(576)) {
+      padding-right: 1.7rem;
+      padding-left: 1.7rem;
+    }
+  }
+
+  &-nav {
+    &__list {
+      @include flex-v-center;
+      gap: 1rem;
+    }
+  }
+}

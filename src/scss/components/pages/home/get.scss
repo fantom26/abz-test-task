@@ -1,0 +1,32 @@
+.get {
+  padding-top: 14rem;
+
+  &__users {
+    display: grid;
+    grid-gap: 2.9rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+
+    @media (max-width: em(768)) and (min-width: em(577)) {
+      grid-gap: 1.6rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(576)) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .btn {
+    @include push--auto;
+    margin-top: 5rem;
+    min-width: 12rem;
+  }
+
+  &__error {
+    margin-top: 2rem;
+    color: var(--clr-error);
+  }
+}

@@ -1,0 +1,37 @@
+.post {
+  padding-top: 14rem;
+  padding-bottom: 10rem;
+
+  &__form {
+    @include push--auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    max-width: 38rem;
+
+    &-btn {
+      @include push--auto;
+      margin-top: 5rem;
+    }
+
+    .form-input + .form-input {
+      margin-top: 5rem;
+    }
+
+    .form-file-upload {
+      margin-top: 4.7rem;
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 0.7rem;
+  }
+
+  &__image {
+    @include push--auto;
+    max-width: 32.8rem;
+  }
+}

@@ -1,0 +1,60 @@
+.form-file-upload {
+  position: relative;
+
+  input {
+    outline: none;
+    border: 0.1rem solid #d0cfcf;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: 5rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid var(--clr-black);
+    border-top-left-radius: var(--input-radius);
+    border-bottom-left-radius: var(--input-radius);
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  &__name {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border-top: 0.1rem solid #d0cfcf;
+    border-right: 0.1rem solid #d0cfcf;
+    border-bottom: 0.1rem solid #d0cfcf;
+    border-top-right-radius: var(--input-radius);
+    border-bottom-right-radius: var(--input-radius);
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    color: var(--clr-grey);
+    transition: color var(--transition);
+  }
+
+  &.error {
+    .form-file-upload__name,
+    .form-file-upload__btn {
+      border-width: 0.2rem;
+      border-color: var(--clr-error);
+    }
+
+    .form-file-upload__btn {
+      color: var(--clr-error);
+    }
+  }
+
+  &.load {
+    .form-file-upload__name {
+      color: var(--clr-black);
+    }
+  }
+}

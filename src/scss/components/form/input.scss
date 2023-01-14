@@ -1,0 +1,133 @@
+.form-input {
+  position: relative;
+
+  &__wrapper {
+    @include font-source(Nunito, 1.6rem, var(--clr-grey), 400, false);
+    position: relative;
+    align-items: center;
+    border-radius: var(--input-radius);
+    min-height: 5.4rem;
+    cursor: text;
+
+    &-input {
+      display: block;
+      padding-right: 1.6rem;
+      padding-left: 1.6rem;
+      width: 100%;
+      min-height: 5.4rem;
+      font: inherit;
+      color: var(--clr-black);
+      background: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__label {
+    @include font-source(Nunito, 1.6rem, var(--clr-grey), 400, false);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform: translate(1.4rem, 1.8rem) scale(1);
+    transform-origin: left top;
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+      max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    pointer-events: none;
+  }
+
+  &__wrapper-input:focus + &__label {
+    font-weight: 500;
+    transform: translate(1.4rem, -0.7rem) scale(0.75);
+    pointer-events: auto;
+    user-select: none;
+  }
+
+  &__wrapper-input:not(:placeholder-shown).form-input__wrapper-input:not(:focus) + &__label {
+    font-weight: 500;
+    transform: translate(1.4rem, -0.7rem) scale(0.75);
+    pointer-events: auto;
+    user-select: none;
+  }
+
+  &__fieldset {
+    position: absolute;
+    overflow: hidden;
+    border: 0.1rem solid #d0cfcf;
+    border-radius: inherit;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    min-width: 0%;
+    pointer-events: none;
+    inset: -0.5rem 0 0;
+  }
+
+  &__legend {
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: 1.4rem;
+    max-width: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    visibility: hidden;
+    transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  }
+
+  &__legend > span {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 500;
+    opacity: 0;
+    visibility: visible;
+  }
+
+  &__wrapper input:focus ~ &__fieldset &__legend {
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: 1.4rem;
+    max-width: 100%;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    visibility: hidden;
+    transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
+  }
+
+  &__wrapper-input:not(:placeholder-shown).form-input__wrapper-input:not(:focus) ~ &__fieldset &__legend {
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: 1.4rem;
+    max-width: 100%;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    visibility: hidden;
+    transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
+  }
+
+  &.error {
+    .form-input__label {
+      color: var(--clr-error);
+    }
+
+    .form-input__legend {
+      background-color: var(--clr-error);
+    }
+
+    .form-input__fieldset {
+      border: 0.2rem solid var(--clr-error);
+    }
+
+    .form-input__wrapper input:focus ~ .form-input__fieldset .form-input__legend {
+      color: var(--clr-error);
+    }
+  }
+}

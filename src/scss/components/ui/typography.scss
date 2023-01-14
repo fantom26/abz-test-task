@@ -1,0 +1,30 @@
+.typography {
+  &.h1 {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  &.paragraph1 {
+    line-height: 162%;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.white {
+    color: var(--clr-white);
+  }
+
+  &.black {
+    color: var(--clr-black);
+  }
+}
+
+h1,
+h2,
+h3 {
+  &.typography {
+    font-weight: 400;
+  }
+}
