@@ -10,7 +10,7 @@ import "./scss/globals.scss";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <Provider store={store}>
-    <Router>
+    <Router basename="/abz-test-task">
       <App />
     </Router>
   </Provider>
