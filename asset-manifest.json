@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/abz-test-task/static/css/main.0a9874be.css",
-    "main.js": "/abz-test-task/static/js/main.dbc45238.js",
-    "static/js/641.bb269347.chunk.js": "/abz-test-task/static/js/641.bb269347.chunk.js",
+    "main.js": "/abz-test-task/static/js/main.a73817a9.js",
+    "static/js/124.16179aa6.chunk.js": "/abz-test-task/static/js/124.16179aa6.chunk.js",
     "static/js/677.d66c3e3b.chunk.js": "/abz-test-task/static/js/677.d66c3e3b.chunk.js",
     "static/media/Nunito-Medium.woff2": "/abz-test-task/static/media/Nunito-Medium.8df3354320fef5490134.woff2",
     "static/media/Nunito-Regular.woff2": "/abz-test-task/static/media/Nunito-Regular.08d796f9635ea73e67b1.woff2",
     "index.html": "/abz-test-task/index.html",
     "main.0a9874be.css.map": "/abz-test-task/static/css/main.0a9874be.css.map",
-    "main.dbc45238.js.map": "/abz-test-task/static/js/main.dbc45238.js.map",
-    "641.bb269347.chunk.js.map": "/abz-test-task/static/js/641.bb269347.chunk.js.map",
+    "main.a73817a9.js.map": "/abz-test-task/static/js/main.a73817a9.js.map",
+    "124.16179aa6.chunk.js.map": "/abz-test-task/static/js/124.16179aa6.chunk.js.map",
     "677.d66c3e3b.chunk.js.map": "/abz-test-task/static/js/677.d66c3e3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a9874be.css",
-    "static/js/main.dbc45238.js"
+    "static/js/main.a73817a9.js"
   ]
 }
