@@ -8,8 +8,8 @@ export const UserCard: FC<{ info: IUser }> = (props) => {
   const { photo, name, position, email, phone } = props.info;
 
   return (
-    <div className="user">
-      <div className="user__img">{photo ? <img src={photo} alt="User's photo" loading="lazy" /> : IMAGES.user}</div>
+    <li className="user">
+      <div className="user__img">{photo ? <img src={photo} width="70" height="70" alt="User's photo" loading="lazy" /> : IMAGES.user}</div>
       <div className="user__name" data-title={name}>
         <Typography tag="h3" center>
           {name}
@@ -28,6 +28,6 @@ export const UserCard: FC<{ info: IUser }> = (props) => {
       <Typography tag="p" center>
         {phone}
       </Typography>
-    </div>
+    </li>
   );
 };

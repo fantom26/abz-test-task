@@ -1,14 +1,15 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 
-import { UserCard } from "components/cards";
 import { Button, Container, Loader, Typography } from "components/ui";
 import { useAppSelector, useDispatchedActions, useTranslation } from "hooks";
 import { getAllUsers } from "store/selectors";
 
-export const Get = () => {
+import { UsersList } from "./components/users";
+
+export const Get: FC = () => {
   const t = useTranslation();
 
-  const { page, limit, usersStatus, error, users, hasMore } = useAppSelector(getAllUsers);
+  const { page, limit, usersStatus, error, hasMore } = useAppSelector(getAllUsers);
   const { getUsers, incrementPage } = useDispatchedActions();
 
   const loadMoreItems = () => {
@@ -34,11 +35,7 @@ export const Get = () => {
             {error}
           </Typography>
         )}
-        <ul className="get__users">
-          {users.map((user) => (
-            <UserCard key={user.id} info={user} />
-          ))}
-        </ul>
+        <UsersList />
         {usersStatus !== "loading" && hasMore && <Button onClick={loadMoreItems}>{t.btn.showMore}</Button>}
         {usersStatus === "loading" && <Loader />}
       </Container>
